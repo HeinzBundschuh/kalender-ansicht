@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <title>Kalender-Ansicht</title>
+  <link rel="stylesheet" href="manage.css">
+</head>
+<body>
+  <header>
+    <h1 data-t>Kalender-Ansicht</h1>
+    <p class="sub" data-t>Termine in der Monats- und Mehrwochenansicht ausblenden oder kompakt anzeigen – rein optisch. Export und Löschen wirken dagegen auf die echten Termine; vor jedem Löschen wird ein ICS-Backup im Download-Ordner angelegt.</p>
+  </header>
+
+  <section class="panel">
+    <div class="head">
+      <div class="monthnav">
+        <button id="prev" title="Vorheriger Monat" data-t-title>◀</button>
+        <h2 id="monthTitle"></h2>
+        <button id="next" title="Nächster Monat" data-t-title>▶</button>
+        <button id="today" data-t>Heute</button>
+      </div>
+      <label class="inline small"><input type="checkbox" id="showOff" checked> <span data-t>ausgeblendete gedimmt zeigen</span></label>
+    </div>
+    <div id="eventList"></div>
+    <div id="status" class="status"></div>
+  </section>
+
+  <section class="panel">
+    <h2 data-t>Schalter</h2>
+    <label class="switch"><input type="checkbox" id="hideEnabled"> <span data-t-html><b>Ausblenden aktiv</b> – ausgeblendete Termine werden im Kalender nicht angezeigt</span></label>
+    <label class="switch"><input type="checkbox" id="compactEnabled"> <span data-t-html><b>Kompaktmodus aktiv</b> – markierte Termine erscheinen als schmaler Balken (Titel im Tooltip)</span></label>
+    <label class="switch indent"><input type="checkbox" id="compactAllSeries"> <span data-t-html>Zusätzlich <b>alle Serientermine</b> kompakt anzeigen</span></label>
+  </section>
+
+  <section class="panel">
+    <div class="head">
+      <h2>🙈 <span data-t>Ausgeblendet</span> <span id="hiddenCount" class="count"></span></h2>
+      <button id="showAll" data-t>👁 Alles einblenden</button>
+    </div>
+    <div id="hiddenList"></div>
+  </section>
+
+  <section class="panel">
+    <div class="head">
+      <h2>▬ <span data-t>Kompakt</span> <span id="compactCount" class="count"></span></h2>
+      <button id="normalAll" data-t>Alle normal anzeigen</button>
+    </div>
+    <div id="compactList"></div>
+  </section>
+
+  <p class="hint" data-t-html>Im Kalender (Monats-/Mehrwochenansicht) geht das auch per Rechtsklick auf einen Termin: ausblenden, kompakt, als ICS exportieren. Löschen dort über Thunderbirds eigenes „Löschen“. Diese Seite öffnest du über die Schaltfläche „Ansicht“ oder <i>Extras → Kalender-Ansicht verwalten …</i></p>
+
+  <div id="dialog" class="dialog-backdrop" hidden>
+    <div class="dialog" role="dialog" aria-modal="true">
+      <h3 id="dlgTitle"></h3>
+      <p id="dlgText"></p>
+      <div id="dlgButtons" class="dlg-buttons"></div>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="manage.js"></script>
+</body>
+</html>

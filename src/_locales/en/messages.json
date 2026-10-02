@@ -1,0 +1,17 @@
+{
+  "extName": {
+    "message": "Calendar Hide & Compact"
+  },
+  "extDesc": {
+    "message": "Hide events and series in the month view or show them compactly (display only), plus an event manager with a month list: hide, export as ICS, delete with backup."
+  },
+  "actionTitle": {
+    "message": "Calendar Hide & Compact: manage, hide and compact events"
+  },
+  "actionLabel": {
+    "message": "Hide & Compact"
+  },
+  "menuOpen": {
+    "message": "Manage hidden and compact events …"
+  }
+}

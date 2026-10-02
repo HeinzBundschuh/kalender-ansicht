@@ -1,0 +1,17 @@
+{
+  "extName": {
+    "message": "Kalender-Ansicht"
+  },
+  "extDesc": {
+    "message": "Termine und Serien in der Monatsansicht ausblenden oder kompakt anzeigen (rein optisch), dazu eine Terminverwaltung mit Monatsliste: ausblenden, als ICS exportieren, löschen mit Backup."
+  },
+  "actionTitle": {
+    "message": "Kalender-Ansicht: Termine verwalten, ausblenden und kompakt anzeigen"
+  },
+  "actionLabel": {
+    "message": "Ansicht"
+  },
+  "menuOpen": {
+    "message": "Kalender-Ansicht verwalten …"
+  }
+}
